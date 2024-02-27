@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* li a {
+        text-decoration: none;
+        color: black;
+      } */
+      [target] {
+        text-decoration: none;
+      }
+      [target="_blank"] {
+        background-color: blue;
+        color: white;
+      }
+      [target="_self"] {
+        background-color: red;
+        color: white;
+      }
+      /* link1, link2 - 불릿 기호 없애기 */
+      /* .link1,
+      .link2 {
+        list-style-type: none;
+      } */
+      [class^="link"] {
+        list-style-type: none;
+      }
+
+      /* 안쪽 여백 : padding */
+      /* [class$="name"] {
+        padding: 20px;
+        color: red;
+      } */
+      /* 
+        = : value와 일치하는
+        ^= : value로 시작하는
+        $= : value로 끝나는
+        ~= : 여러개의 클래스명이 존재할 때 특정 클래스명을 포함하고 있는 / class가 아니라도 사용가능
+        *= : value를 포함하고 있는 / 특정문자
+        |= : value 다음에 - 이 따라오는 경우만
+       */
+      /* [class~="test"] {
+         padding: 20px;
+         color: red;
+       } */
+      [class*="fr"] {
+        padding: 20px;
+        color: red;
+      }
+      [class|="top"] {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        1. selector(선택자)
+        1) class : 전역 속성인 클래스를 이용하기 / .접근
+        2) id : 전역 속성인 아이디를 이용하기 / #접근
+        3) tag : 태그 이용 / 태그이름을 그대로 씀 / 현재 페이지 내의 동일한 태그에 모두 적용됨
+        4) * : 전체선택자
+        5) 자손(하위) 선택자 : 자식 + 손자   부모선택자 자식선택자 / 공백 1칸 : 자손 찾기
+        6) 자식 : 부모선택자 > 자식선택자 / a공백 > 공백b / a의 자식 b 
+        7) 형제 선택자 : + or ~ 선행 선택자 + 선택자(바로 뒤따라 오는 선택자 요소만)
+                               선행 선택자 ~ 선택자(뒤따라 오는 선택자 모든 요소)
+        8) 그룹 선택자 : 다양한 선택자 요소에 동일한 디자인을 적용하는 경우 / ,를 기준으로 여러 선택자를 사용
+        9) 속성 선택자 : [속성명], [속성명="value"], [속성명~="value"], [속성명|="value"], [속성명^="value"], [속성명$="value"], [속성명*="value"]
+     -->
+    <ul>
+      <li>
+        <a href="#" target="_blank">google</a>
+      </li>
+      <li class="link1">
+        <a href="#" target="_blank">daum</a>
+      </li>
+      <li class="link2">
+        <a href="#" target="_self">naver</a>
+      </li>
+    </ul>
+    <a href="mailto:master@google.com">master@google.com</a>
+    <div>
+      <input type="text" name="" id="" class="fruit_name test" />
+      <input type="text" name="" id="" class="fruit_color test" />
+    </div>
+    <h1 class="top-header">Welcome</h1>
+    <p class="top-text">Hello World</p>
+    <p class="topcontent">CSS</p>
+  </body>
+</html>
