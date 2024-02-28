@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./reset.css" /> -->
+    <style>
+      :root {
+        font-size: 13px;
+      }
+      body {
+        font-size: 12px;
+      }
+      .box {
+        float: left;
+        margin-right: 20px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .box_px {
+        width: 160px;
+        height: 160px;
+      }
+      /* 글자 크기 지정 안하면 브라우저 기본 크기 16px */
+      .box_em {
+        width: 10em;
+        height: 10em;
+      }
+      .box_rem {
+        width: 10rem;
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      css 단위
+      - 모디터 : px, em, %
+        px : 고정크기
+        % : 상대크기
+        em : em 단위가 쓰여진 곳의 폰트 사이즈 배수
+     -->
+    <h1>CSS 기본 문법</h1>
+    <h2>단위</h2>
+    <p>
+      <span>Lorem, ipsum</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat non velit veritatis nam, voluptate illum labore soluta
+      expedita quidem aperiam iste tempore necessitatibus blanditiis ducimus aspernatur perspiciatis libero inventore explicabo doloribus accusamus
+      aliquid veniam? Error facere asperiores vitae suscipit ducimus? Placeat a modi consequatur magni est numquam asperiores ducimus deleniti!
+    </p>
+
+    <div class="wrapper clearfix">
+      <div class="box box_px"></div>
+      <div class="box box_em"></div>
+      <div class="box box_rem"></div>
+    </div>
+  </body>
+</html>
