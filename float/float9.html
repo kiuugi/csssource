@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 요소에 box-sizing 설정 */
+      * {
+        box-sizing: border-box;
+      }
+      /* header 요소 : 배경색#333, 안쪽여백 30, 가운데정렬, 글꼴크기 35, 글자색 흰색 */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 30px;
+        /* margin: 0 auto; */
+        text-align: center;
+        font-size: 35px;
+      }
+      /* nva 요소 : 높이 500, 배경색 #ccc, 안쪽여백 20 */
+      nav {
+        width: 30%;
+        height: 500px;
+        background-color: #ccc;
+        padding: 20px;
+        float: left;
+      }
+      li {
+        list-style-type: none;
+      }
+      /* article 요소 : 높이 500, 배경색#f1f1f1, 안쪽여백 20 */
+      article {
+        width: 70%;
+        height: 500px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        float: right;
+      }
+      /* footer 요소 : 배경색#777, 안쪽여백 10, 가운데정렬, 글자색 흰색 */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Cities</h2>
+    </header>
+    <section class="clearfix">
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis mollitia minima vitae debitis earum nisi. Possimus velit aliquam
+          cumque, recusandae rem illum eos magnam ullam impedit inventore unde eius.
+        </p>
+        <p>
+          <!-- lorem100 -->
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quasi iste possimus alias accusantium, commodi earum blanditiis mollitia,
+          tempora vitae cupiditate ad facilis aliquam laboriosam reprehenderit delectus neque. Asperiores officia voluptates aliquam, eius neque sit
+          quae nemo eum impedit quidem! Unde quos a rem architecto autem assumenda vel corrupti similique sed dolorem. Voluptas ipsam possimus rem
+          deleniti, est libero ea quibusdam consequuntur! Qui omnis laudantium doloremque enim architecto consequuntur aut totam iusto dolor fuga
+          eligendi distinctio ut quo explicabo nemo quaerat quibusdam natus odit, cumque possimus ipsum labore! Officiis maiores rerum iste quibusdam
+          iure odio, tempore voluptatum necessitatibus at ut!
+        </p>
+      </article>
+    </section>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
