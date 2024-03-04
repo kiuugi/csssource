@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-evenly; */
+        /* align-content: space-evenly; */
+        align-items: baseline;
+
+        border: 2px solid;
+        height: 400px;
+      }
+      .container div {
+        width: 200px;
+        height: 100px;
+      }
+      /* 배경색 */
+      .item:nth-child(1) {
+        background-color: red;
+      }
+      .item:nth-child(2) {
+        background-color: blue;
+      }
+      .item:nth-child(3) {
+        background-color: green;
+        font-size: 50px;
+      }
+      .item:nth-child(4) {
+        background-color: magenta;
+        height: 80px;
+      }
+      .item:nth-child(5) {
+        background-color: yellow;
+        height: 60px;
+      }
+      .item:nth-child(6) {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        레이아웃 : 위-아래 수직 구성(스크롤 사용)
+
+        1. 수평(왼 => 오)
+        1) float
+        2) inline-block
+        3) flex
+            - flex-direction(방향): row(기본), column(위->아래), row-reverse(float에 rigth와 같음), column-reverse(아래 -> 위)
+            - flex-wrap(여러줄 허용 여부) : wrap(맨 뒤부터 내려감)), nowrap(기본 : 한줄), wrap-reverse(맨 뒤부터 올라감)
+            - justify-content(주 축 정렬) : flex-start(기본), flex-end, center, space-between, space-around(공백 중첩x), space-evenly 
+                주축 : 요소가 배치되는 방향 (flex-direction: row => 가로 주 축, flex-direction: column => 세로 주 축)
+                보조(교차)축 : 주축과 교차 되는 축
+            - align-content(교차 축 정렬) : 교차 축 공간이 있고, 주축에서 여러 줄 허용
+                stretch : 부모의 height 에 맞춰 자식 높이가 늘어남(기본-공백 안 생김)
+                flex-start, flex-end, center, space-between, space-around, space-evenly 
+            - align-items : 한 줄 일 때 정렬(align-content 와 같이 사용되는 경우 align - content 우성) baseline(글자 밑에줄 정렬)
+                stretch(기본) : 컨테이너 교차축을 채우기 위해 items 늘림
+                 flex-start, flex-end, center, baseline
+     -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+      <div class="item">F</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ex minima, facere id architecto incidunt dolores, placeat ad, ab non commodi
+      eaque consectetur ipsam perferendis. Voluptates debitis blanditiis iure praesentium!
+    </p>
+  </body>
+</html>
