@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #333338;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #444;
+      }
+      .container {
+        display: flex;
+      }
+      /* main-content, sidebar : 배경색 #eee, padding 6, 바깥여백 10 */
+      .main-content,
+      .sidebar {
+        background-color: #eee;
+        padding: 6px;
+        margin: 10px;
+      }
+      .sidebar {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .sidebar .panel {
+      }
+
+      /* panel : 배경색 흰색, 안쪽여백 20, 바깥여백 10 */
+      .panel {
+        background-color: white;
+        padding: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main-content">
+        <div class="panel">
+          <h1>Main Title</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci velit veniam eum cum ipsum aliquam laudantium. Ipsam laboriosam
+            corporis officia excepturi nemo, optio nesciunt quis saepe nobis eum dolorem ut?
+          </p>
+          <img src="https://placehold.co/100x120" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non id at labore nemo nihil nobis accusamus tenetur soluta quasi aliquam
+            repellat quidem impedit, sunt eligendi eos ducimus reiciendis delectus molestiae facilis dolorum cupiditate quod, porro eaque. Eligendi
+            aspernatur velit architecto nesciunt facilis officia quod, veritatis, officiis ipsa, tempore fugiat debitis.
+          </p>
+          <h3>SubTitle</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odit hic optio esse, sapiente quo voluptas quaerat eos soluta eligendi non
+            perspiciatis nostrum, natus ratione voluptates, in harum tenetur! Illo!
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odit hic optio esse, sapiente quo voluptas quaerat eos soluta eligendi non
+            perspiciatis nostrum, natus ratione voluptates, in harum tenetur! Illo!
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odit hic optio esse, sapiente quo voluptas quaerat eos soluta eligendi non
+            perspiciatis nostrum, natus ratione voluptates, in harum tenetur! Illo!
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odit hic optio esse, sapiente quo voluptas quaerat eos soluta eligendi non
+            perspiciatis nostrum, natus ratione voluptates, in harum tenetur! Illo!
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odit hic optio esse, sapiente quo voluptas quaerat eos soluta eligendi non
+            perspiciatis nostrum, natus ratione voluptates, in harum tenetur! Illo!
+          </p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h3>Item 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, possimus aliquam rerum quas asperiores corporis officia ullam? Quos,
+          </p>
+        </div>
+        <div class="panel">
+          <h3>Item 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="panel">
+          <h3>Item 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, possimus aliquam rerum quas as</p>
+        </div>
+        <div class="panel">
+          <h3>Item 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, possimus aliquam rerum quas asperiores corporis officia ullam? Quos,
+            delectus consequuntur voluptatem necessitatibus laborum rem tempore doloremque cum atque aliquam nihil.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

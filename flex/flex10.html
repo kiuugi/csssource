@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체요소 : 모든 여백 0, 크기 산정 : 테두리 포함 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* header h1 : 글자크기 3em, 가운데 정렬 */
+      header h1 {
+        font-size: 3em;
+        text-align: center;
+      }
+
+      #menus > div {
+        border: 1px solid;
+        height: 400px;
+        margin-bottom: 15px;
+        position: relative;
+      }
+      #menus h2 {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        padding: 5px;
+        font-size: 2em;
+        color: white;
+        /* h-shadow v-shadow blur-radius color */
+        text-shadow: 3px 3px 5px black;
+      }
+      #menu1 {
+        background: url(../image/dish1.jpg) no-repeat center;
+        /* background-image: url(../image/dish1.jpg);
+        background-repeat: no-repeat;
+        background-position: center; */
+        background-size: cover;
+      }
+      #menu2 {
+        background: url(../image/dish2.jpg) no-repeat center;
+        background-size: cover;
+      }
+      #menu3 {
+        background: url(../image/dish3.jpg) no-repeat center;
+        background-size: cover;
+      }
+      #menu4 {
+        background: url(../image/dish4.jpg) no-repeat center;
+        background-size: cover;
+      }
+      #menu5 {
+        background: url(../image/dish5.jpg) no-repeat center;
+        background-size: cover;
+      }
+      /* footer : 배경색 #373737 높이 200, 글자 색상 흰색, 가운데 정렬, 세로 가운데 정렬 */
+      footer {
+        background-color: #373737;
+        height: 200px;
+      }
+      footer p {
+        color: white;
+        text-align: center;
+        line-height: 200px;
+      }
+      @media screen and (min-width: 768px) {
+        #menus {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        #menu1,
+        #menu2,
+        #menu3,
+        #menu4 {
+          width: 49%;
+        }
+        #menu5 {
+          width: 100%;
+        }
+      }
+      /* 992~ */
+      @media screen and (min-width: 992px) {
+        #menu1,
+        #menu2,
+        #menu3,
+        #menu4,
+        #menu5 {
+          width: 33%;
+        }
+        #menu5 {
+          flex: 2 2 0;
+          margin-left: 0.5%;
+          /* flex-grow: 2;
+          flex-shrink: 2;
+          flex-basis: 0; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>솔로의 식탁</h1></header>
+      <section id="menus">
+        <div id="menu1">
+          <h2>밥/죽</h2>
+        </div>
+        <div id="menu2">
+          <h2>국/찌개</h2>
+        </div>
+        <div id="menu3">
+          <h2>반찬</h2>
+        </div>
+        <div id="menu4">
+          <h2>일품요리</h2>
+        </div>
+        <div id="menu5">
+          <h2>음료/칵테일</h2>
+        </div>
+      </section>
+      <footer>
+        <p>솔로의 식탁</p>
+      </footer>
+    </div>
+  </body>
+</html>

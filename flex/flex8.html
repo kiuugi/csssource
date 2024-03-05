@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 요소 크기 산정시 border 포함 */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* body 배경색 #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper max-width 60rem width 100%, margin 2rem auto */
+      .wrapper {
+        /* 60rem = 기본 픽셀(16) * 60 = 960px */
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem auto;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        /* 배경색 흰색, width 60%, padding 1.618rem */
+        background-color: white;
+        width: 60%;
+        padding: 1.618rem;
+        order: 0;
+      }
+      .sidebar {
+        /* sidedar width 20%, padding 1.618rem */
+        width: 20%;
+        padding: 1.618rem;
+        color: white;
+      }
+      .left {
+        /* 배경색 #3498db */
+        background-color: #3498db;
+        order: -1;
+      }
+      .right {
+        /* 배경색 #34495e */
+        background-color: #34495e;
+        order: 1;
+      }
+
+      /* 481 ~ 768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          width: 100%;
+          order: -2;
+        }
+        .sidebar {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          width: 100%;
+          order: -2;
+        }
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad quod doloribus cum voluptate quis blanditiis voluptatum, mollitia assumenda ab
+          maiores. Sint, delectus. Facere sint nihil magni! Illo consequuntur quos, corrupti dolores sit minus sunt, et libero enim ratione ipsam!
+          Accusamus, beatae velit? Rem, error voluptatibus molestias soluta blanditiis perferendis at aperiam cupiditate nesciunt illo quis, corporis
+          impedit dolor totam! Voluptatem, id similique? Quasi officia alias quam error! Tenetur ab a magnam accusamus quam qui eveniet eum, est
+          mollitia repellendus totam blanditiis, unde laboriosam quia iusto odio nisi ad dolorum, voluptas delectus. Sint repellat expedita itaque
+          quisquam laborum non corporis aut.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad quod doloribus cum voluptate quis blanditiis voluptatum, mollitia assumenda ab
+          maiores. Sint, delectus. Facere sint nihil magni! Illo consequuntur quos, corrupti dolores sit minus sunt, et libero enim ratione ipsam!
+          Accusamus, beatae velit? Rem, error voluptatibus molestias soluta blanditiis perferendis at aperiam cupiditate nesciunt illo quis, corporis
+          impedit dolor totam! Voluptatem, id similique? Quasi officia alias quam error! Tenetur ab a magnam accusamus quam qui eveniet eum, est
+          mollitia repellendus totam blanditiis, unde laboriosam quia iusto odio nisi ad dolorum, voluptas delectus. Sint repellat expedita itaque
+          quisquam laborum non corporis aut.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequuntur. Earum suscipit, hic repellendus quo quaerat veniam tempora
+        magnam, consequatur minus ducimus doloremque veritatis placeat adipisci? Beatae, facilis illo qui reiciendis voluptatibus eaque aut. Excepturi
+        quae minima nostrum voluptatibus, corporis optio vitae, aspernatur nisi sed repudiandae quas, magnam quaerat ea.
+      </aside>
+      <aside class="sidebar right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, consequuntur. Earum suscipit, hic repellendus quo quaerat veniam tempora
+        magnam, consequatur minus ducimus doloremque veritatis placeat adipisci? Beatae, facilis illo qui reiciendis voluptatibus eaque aut. Excepturi
+        quae minima nostrum voluptatibus, corporis optio vitae, aspernatur nisi sed repudiandae quas, magnam quaerat ea.
+      </aside>
+    </div>
+  </body>
+</html>
